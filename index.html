@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nice Gadgets</title>
+    <link rel="icon" type="image/svg+xml" href="/react_phone-catalog/assets/favicon-CTIKT_l-.svg" />
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          var base = '/react_phone-catalog';
+          var route = redirect.startsWith(base)
+            ? redirect.slice(base.length)
+            : redirect;
+          window.history.replaceState(null, null, base + route);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/react_phone-catalog/assets/index-D1HHLHma.js"></script>
+    <link rel="stylesheet" crossorigin href="/react_phone-catalog/assets/index-BcOZIc6m.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
